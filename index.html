@@ -1,0 +1,62 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+  <header>
+    <a href="/" class="logo">EWB-USA | CWRU Chapter</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#exec">About Us</a>
+      <a href="/admin/">Admin Login</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Engineers Without Borders USA<br>Case Western Reserve University Chapter</h1>
+    <p>"We don't work for people, we work with people"</p>
+  </section>
+
+  <main>
+    <section id="projects" style="padding: 2rem;">
+      <h2 style="text-align: center; color: var(--ewb-blue);">Current Projects</h2>
+      <div class="grid">
+        {% for project in site.projects %}
+          <div class="card">
+            {% if project.image %}
+              <img src="{{ project.image }}" alt="{{ project.title }}">
+            {% endif %}
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <a href="{{ project.url }}" style="color: var(--ewb-blue); font-weight: bold;">Learn More &rarr;</a>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="exec" style="padding: 2rem; background: #f0f4f8;">
+      <h2 style="text-align: center; color: var(--ewb-blue);">Meet The Exec</h2>
+      <div class="grid">
+        {% for member in site.exec.members %}
+          <div class="card" style="text-align: center;">
+            <img src="{{ member.photo }}" alt="{{ member.name }}" style="border-radius: 50%; width: 120px; height: 120px; margin: 0 auto 1rem dynamic;">
+            <h3>{{ member.name }}</h3>
+            <p style="color: var(--ewb-blue); font-weight: bold;">{{ member.role }}</p>
+            <p><a href="mailto:{{ member.email }}">{{ member.email }}</a></p>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

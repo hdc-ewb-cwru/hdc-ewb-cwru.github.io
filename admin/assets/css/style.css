@@ -1,0 +1,73 @@
+:root {
+  --ewb-blue: #0065B2;
+  --ewb-light-blue: #ABCAE9;
+  --ewb-green: #CEDC00;
+  --ewb-slate: #3D3935;
+  --bg-cream: #FDFBF7;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-cream);
+  color: var(--ewb-slate);
+}
+
+header {
+  background: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--ewb-light-blue);
+}
+
+.logo {
+  font-weight: bold;
+  color: var(--ewb-blue);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  color: var(--ewb-slate);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--ewb-blue);
+}
+
+.hero {
+  padding: 4rem 2rem;
+  background: var(--ewb-blue);
+  color: white;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border-top: 4px solid var(--ewb-blue);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
