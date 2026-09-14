@@ -1,0 +1,11 @@
+members:
+  - name: "Adam Abreu"
+    role: "President"
+    email: "president@case.edu"
+    linkedin: "https://linkedin.com"
+    photo: "/assets/images/adam.jpg"
+  - name: "Ella Clifford"
+    role: "Vice President of Development"
+    email: "vp-dev@case.edu"
+    linkedin: "https://linkedin.com"
+    photo: "/assets/images/ella.jpg"
