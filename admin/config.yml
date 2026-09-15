@@ -1,10 +1,14 @@
+# Place at the very top of admin/config.yml
 backend:
-  name: git-gateway
-  branch: main
+  name: github
+  repo: hdc-ewb-cwru/hdc-ewb-cwru.github.io
+  branch: main # or vmc
 
+# Media configuration
 media_folder: "assets/images"
 public_folder: "/assets/images"
 
+# Collections
 collections:
   - name: "projects"
     label: "Projects"
@@ -13,25 +17,6 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Status", name: "status", widget: "select", options: ["Active", "Past"] }
-      - { label: "Short Blurb", name: "description", widget: "text" }
-      - { label: "Cover Image", name: "image", widget: "image" }
-      - { label: "Body Content", name: "body", widget: "markdown" }
-
-  # FIXED: Added the 'files:' key under exec
-  - name: "exec"
-    label: "Executive Board"
-    files:
-      - name: "exec_members"
-        label: "Exec Members List"
-        file: "_data/exec.yml"
-        fields:
-          - label: "Members"
-            name: "members"
-            widget: "list"
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Role", name: "role", widget: "string" }
-              - { label: "Email", name: "email", widget: "string" }
-              - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
-              - { label: "Photo", name: "photo", widget: "image" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Project Image", name: "image", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
