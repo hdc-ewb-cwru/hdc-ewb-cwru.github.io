@@ -1,9 +1,7 @@
 backend:
   name: github
   repo: hdc-ewb-cwru/hdc-ewb-cwru.github.io
-  branch: main
-  base_url: https://sentryauth.herokuapp.com # Free public OAuth proxy for Decap CMS
-  auth_endpoint: auth
+  branch: main # or vmc
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
