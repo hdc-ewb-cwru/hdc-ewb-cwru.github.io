@@ -1,7 +1,9 @@
 backend:
   name: github
   repo: hdc-ewb-cwru/hdc-ewb-cwru.github.io
-  branch: main # or vmc
+  branch: main
+  base_url: https://decap-oauth-backend.vercel.app # Free community OAuth proxy
+  auth_endpoint: /api/auth
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
